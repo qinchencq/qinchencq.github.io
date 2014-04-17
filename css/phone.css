@@ -1,0 +1,158 @@
+/*CSS For Phone*/
+@media (max-width: 639px) {   
+    /*Nav*/
+    div.wrap {
+        margin-top:91px;
+    }
+    #site-title {
+        font-size: 2.2em;
+    }
+    #nav-main {
+        display: none;
+        background: inherit;
+        height: 15em;
+    }
+    #nav-main ul {
+        margin-top:-5px;
+        z-index:99;
+        overflow: visible !important;
+    }
+    #nav-main li {
+        display: list-item;
+        list-style: none;
+        text-align:center;
+        margin-bottom:1.5%;
+    }
+    #nav-main li a {
+        padding:1.4% 38%;
+    }
+    div.social.hide-for-large-up {
+        padding-top:17px;
+        padding-left:-5px;
+        background-color:inherit;
+        height: 58px;
+    }
+    .social li {
+        width:35px;
+    }
+    .symbol,a.symbol:before {
+        padding-left:1.5px;
+    }
+    /*Home*/
+    div.homeText li {
+        margin-bottom:25px;
+    }
+    div.homeText li span {
+        font-size: 1.3em;
+    }
+    .homeText p {
+        font-size: 0.9em;
+    }
+    /*Story*/
+    .artistInfo {
+        line-height: 1.5em;
+        padding:1% 5%;
+    }
+    /*Years*/
+    .yearsThumb .thumb:first-child,.yearsThumb .thumb:nth-child(n){
+        margin-top:10px;
+        width:100%;
+    }
+    .yearsThumb .thumb:last-child {
+        margin-top:10px;
+        width:100%;
+    }
+    /*Timeline*/
+    #timeline-embed {
+        margin-top:91px !important;
+    }
+    /*Music*/
+    .audiojs {
+      width:375px;
+      margin-left: -10px;
+    }
+    .audiojs .scrubber {
+      width:200px;
+    }
+    /*Perspective*/
+    .persMedia {
+        width:95%;
+        margin:2% 0 0 3%;
+    }
+    .persCap {
+      width:100%;
+      padding:1.5% 3%;
+    }
+    .persWrap .title {
+      width:100%;
+      padding: 0.7em 0;
+    }
+    /*About*/
+    .aboutText {
+      padding: 2% 5% 1.5% 5%;      
+    }
+    .aboutText.twoCol {
+      padding: 2% 7% 1.5% 7%;
+    }
+    .twoCol {
+      -moz-column-count:1; /* Firefox */
+      -webkit-column-count:1; /* Safari and Chrome */
+      column-count:1;
+    }
+}  
+
+@media (max-width: 480px) { 
+    /*Nav*/
+    #site-title {
+        font-size: 1.8em;
+    }
+    #nav-main {
+        height:14em;
+    }
+    #nav-main li a{
+        padding:2% 25% 2% 25%;
+    }
+    .social li {
+        width:30px;
+    }
+    div#nav a#pull {
+        margin-left:-25px;
+    }
+    div.social.hide-for-large-up {
+        padding-top:14px;
+    }
+    div.social.hide-for-large-up ul {
+        margin-left:-6px;
+    }
+    /*Home*/
+    div.homeText li {
+        margin-bottom:10px;
+    }
+    div.homeText li span {
+        font-size: 0.9em;
+    }
+    /*Music*/
+    .audiojs {
+      width:285px;
+      margin-left: 0px;
+    }
+    .audiojs .scrubber {
+      width:115px;
+    }
+    /*Perspective*/
+    .persCap {
+      width:100%;
+      padding:3% 3% 0 3%;
+    }
+} 
+@media (max-width: 320px) {
+    #nav-main {
+        height:13em;
+    }
+    #nav-main ul {
+        margin-top:-8px;
+    }
+    div.social.hide-for-large-up {
+        padding-top:14px;
+    }
+}

@@ -1,0 +1,725 @@
+/*
+Name:20 years on
+Date: Sep.15,2013
+Description: 20 years on Multimedia Project 
+Version: 1.0 
+Author: Qin Chen 
+*/
+
+/*Global*/
+body {
+  background-color:#E3E3E3;
+  font-family:open-sans,sans-serif;
+  line-height: 1.2em;
+}
+body a {
+  color:rgb(118, 194, 187);
+}
+body a:hover {
+  color:rgb(78, 174, 165);
+}
+body a:active {
+  color:rgb(56, 61, 63);
+}
+body a:visited {
+  color:rgb(118, 194, 187);
+}
+.clearfix::before,  
+.clearfix::after {  
+    content: " ";  
+    display: table;  
+}  
+.clearfix:after {  
+    clear: both;  
+}  
+.clearfix {  
+    *zoom: 1;  
+}  
+.container {
+	width: 100%; 
+	max-width: 100%;
+}
+.split div:first-child{
+  background-color:#E3E3E3;
+}
+.split div:last-child{
+  background-color:rgb(80, 87, 89);
+}
+.center {
+  margin-left:auto;
+  margin-right:auto;
+}
+/*Font*/
+@font-face {
+    font-family: 'Mono Social Icons Font';
+    src: url('../fonts/MonoSocialIconsFont-1.10.eot');
+    src: url('../fonts/MonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/MonoSocialIconsFont-1.10.woff') format('woff'),
+         url('../fonts/MonoSocialIconsFont-1.10.ttf') format('truetype'),
+         url('../fonts/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
+    src: url('../fonts/MonoSocialIconsFont-1.10.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/*Homepage*/
+div#home .videoWrap {
+  padding:0;
+}
+div.homeText {
+  font-family:open-sans, sans-serif;
+  color:#F7F8FC;
+  font-size:1.2em;
+  line-height:1.2em;
+  padding:2%;
+  background-color:#76C2BB;
+}
+div.homeText li {
+  margin-bottom:2.5%;
+  list-style: none;
+}
+div.homeText li span {
+  font-size:1.5em;
+  background-color:#383D3F;
+  padding:0.4%;
+}
+
+div.homeText li.active span {
+  background-color:#387C76;
+}
+/*Navigation*/
+div#site-title a {
+  color:rgb(118, 194, 187);
+}
+div#site-title a:hover {
+  color:rgb(78, 174, 165);
+}
+#nav { /*For the entire top nav bar*/
+	top: 0;
+	height:45px;
+  width:100%;
+	background: rgb(56, 61, 63);
+	border-bottom: 1px solid #CDCECF;
+  position:fixed;
+	opacity: 0.9;
+  z-index:999 ;
+}
+#site-title { /*for 20yearson title*/
+    color: rgb(205, 206, 207);
+    font-family:bebas-neue,sans-serif;
+    font-size:2em;
+    padding-top:15px;
+    padding-left:3%;
+}
+#nav-main ul { /*Overall style for main nav section*/
+    padding-top:1%;
+    height:45px;
+}
+#nav-main li{ /*Each main nav section*/
+	  display:inline;
+}
+#nav-main li a { /*Specific CSS for each menu item*/
+    transition: background-color 0.5s ease,
+                color 0.5s linear;
+    -webkit-transition: background-color 0.5s ease,
+                        color 0.5s linear;
+    -moz-transition: background-color 0.5s ease,
+                     color 0.5s linear;
+    -o-transition: background-color 0.5s ease,
+                   color 0.5s linear;
+    background-color:rgb(56, 61, 63);/*for FF fix for the color plugin*/
+	  font-family:maven-pro, sans-serif;
+	  font-size:0.8em;
+    padding-left:2%;
+    padding-right:2%;
+	  color: rgb(205, 206, 207);
+}
+#nav-main li a:hover {
+    color:rgb(56, 61, 63);
+    background-color:rgb(118, 194, 187);
+}
+#nav-main ul li a.active {
+    background-color:rgb(118, 194, 187)!important;
+    color:rgb(56, 61, 63)!important;
+}
+a#pull { /*Menu for small-screen, default hidden*/
+	display:none;
+  text-transform: uppercase;
+}
+div.social {
+  float:right;
+}
+.symbol, a.symbol::before { /*For Each Social Icon*/
+    font-family: 'Mono Social Icons Font';
+    padding-left:6%;
+    padding-right:5%;
+    color:rgb(56, 61, 63);
+    -webkit-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    -ms-text-rendering: optimizeLegibility;
+    -o-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+a.symbol::before { 
+    content: attr(title);
+    font-size: 220%;
+    font-weight:100;
+}
+
+.social li { /*For social icon container div*/
+  transition: background-color 0.5s ease;
+  -webkit-transition: background-color 0.5s ease;
+  -moz-transition: background-color 0.5s ease;
+  -o-transition: background-color 0.5s ease;
+	float:left;
+	list-style: none;
+	background: rgb(118, 194, 187);
+	border-right: 1px solid rgb(70, 75, 77);
+	height:45px;
+  margin-top:-1%;
+}
+.social li:hover {
+  background: rgb(205, 206, 207);
+}
+
+/*Home Content*/
+div.wrap {
+  margin-top:45px;
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -45px; 
+}
+.storyEach a,.storyEach a:hover,.storyEach a:visited,.storyEach a:active {
+  color:rgb(56, 61, 63);
+}
+/*Stories Content*/
+.storyEach {
+  border:1px solid #ccc;  
+  display:inline-block;
+  *display:inline;
+  width:25.12%;
+  margin-left:-5px;
+}
+.storyWrap {
+  margin-left:5px;
+}
+.storyWrap .title {
+  margin-left:-5px;  
+  clear:both;
+  width:25.12%;
+}
+.artistInfo {
+  background:#F0F0F0;
+  margin-left:-5px; 
+  font-family:open-sans, sans-serif;
+  color: rgb(56, 61, 63);
+  font-size:1em;
+  line-height:1.2em;
+  border-top:1px solid #ccc;
+  padding:1%;
+}
+.storyImage {
+  max-width:100%;
+  width:100%;
+  cursor:pointer;
+}
+.storyExpander {
+  background-color: #F0F0F0;
+  margin-left:-5px;
+  width:100%;
+}
+.storyEach.selected {
+  background-color:#F0F0F0;
+}
+.storyEach:hover {
+ background-color:#F0F0F0;
+}
+.storyTitle {
+  font-family:maven-pro, sans-serif;
+  font-size:0.9em;
+  text-transform: uppercase;
+  border-top:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+  padding-top:1%;
+  padding-bottom:1%;
+  text-align: center; 
+}
+.storyDes {
+  font-family:open-sans, sans-serif;
+  color: rgb(56, 61, 63);
+  font-size:0.9em;
+  padding:2%;
+  height:120px;
+  margin-bottom: 20px;
+}
+.watch {
+  font-family:maven-pro, sans-serif;
+  font-size:0.9em;
+  text-transform:uppercase;
+  text-align:center;
+  border-top:1px solid #ccc;
+  padding:0.5%;
+}
+.storyTitleEach {
+  color: rgb(81, 81, 81);
+  font-family: bebas-neue,sans-serif;
+  font-size:1.7em;
+  /*padding:1.5%;*/
+}
+.videoWrap {
+  padding:1%;
+}
+a.close {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+ 
+a.close::before,
+a.close::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    height: 1px;
+    background: #76C2BB;
+    transform: rotate(45deg);
+    -ms-transform:rotate(45deg); /* IE 9 */
+    -webkit-transform:rotate(45deg); /* Safari and Chrome */
+    -moz-transform:rotate(45deg);/*FireFox*/
+    -o-transform:rotate(45deg);
+}
+ 
+a.close::after {
+    transform: rotate(-45deg);
+    -ms-transform:rotate(-45deg); /* IE 9 */
+    -webkit-transform:rotate(-45deg); /* Safari and Chrome */
+    -moz-transform:rotate(-45deg);/*FireFox*/
+    -o-transform:rotate(-45deg);
+} 
+a.close:hover::before,
+a.close:hover::after {
+    background: rgb(78, 174, 165);
+}
+.storyDesEach {
+  color: rgb(128, 128, 128);
+  font-family:open-sans, sans-serif;
+  font-size:1.1em;
+  line-height: 1.4em;
+  /*padding-top:3%;*/
+}
+.storyDesEach div {
+  /*padding-bottom:3%;*/
+}
+.storyDesEach b {
+  color:rgb(81, 81, 81);
+}
+#loading {
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 50%; /* Rounds out the halo */
+  opacity: .7; /* Some subtle opacity to help blend with variable background colors */
+  display:none;
+}
+b.credits {
+  font-size:1.1em;
+  text-transform: uppercase;
+}
+/*Artist*/
+#artist .storyEach {
+  width:50%;
+}
+/*1020 years on*/
+#title-then {   
+    border-bottom:1px #E9E9E9 solid;
+    border-right:1px #E9E9E9 solid;   
+    background-color:rgb(80, 87, 89);
+}
+#title-now {   
+    border-bottom:1px #E9E9E9 solid;     
+    background-color:rgb(80, 87, 89);  
+    padding-bottom: 48px;   
+}
+.years-title {
+    font-family:source-sans-pro, sans-serif;
+    font-size:1.5em;
+    text-transform:uppercase;
+    padding-top:0.8em;
+    padding-bottom:0.3em;
+    padding-left:1.4em;
+    color:rgb(210, 210, 210);
+}
+.years-content {
+    font-family:open-sans, sans-serif;
+    font-size:1em;
+    padding-left:2.1em;
+    padding-bottom:1em;
+    line-height: 1.5em;
+    color:rgb(210, 210, 210);
+}
+.title {
+    font-family:maven-pro, sans-serif;
+    font-size:1.2em;
+    text-align:center;
+    padding-bottom:1.0em;
+    padding-top:1.0em;
+    color:rgb(56, 61, 63);
+    clear:both;
+}
+.title-1 {
+    background-color:rgb(231, 110, 102);
+}
+.title-2 {
+    background-color:rgb(102, 201, 231);
+} 
+.title-3 {
+    background-color:rgb(231, 216, 102);
+} 
+.title-4 {
+    background-color:rgb(231, 102, 162);
+} 
+.figure {
+    display: block;  
+    position: relative;
+    overflow: hidden;
+}
+.figureVideo {
+    display: block;  
+    position: relative;
+    overflow: hidden;
+}
+figcaption {  
+    color: #CDCECF;    
+    line-height: 1.5em;
+    font-size: 14px; 
+    background-color: rgba(0, 0, 0, 0.6); 
+    position:absolute;
+    opacity:0;
+    padding:12px;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition:    all 0.6s ease;
+    -o-transition:      all 0.6s ease;
+} 
+.figure:hover figcaption {
+  opacity: 1;
+}
+.figure figcaption { 
+    bottom: -30%;
+}
+.figure:hover figcaption { 
+    bottom: 0; 
+}
+.cap-bot:before {
+    bottom: 0px;
+}
+.figure:before { 
+  content: "Description"; 
+  position: absolute; 
+  background: rgba(255,255,255,0.75); 
+  color: rgb(56, 61, 63);
+  width: 100px;
+  height: 24px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+  /* Only Fx 4 supporting transitions on psuedo elements so far... */
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  opacity: 0.75;    
+}
+.figure:hover:before {
+  opacity: 0;
+}
+.cap-bot-video:before {
+  bottom:0;
+}
+.figureVideo:before { 
+  content: "Click for Video"; 
+  position: absolute; 
+  background: rgba(255,255,255,0.75); 
+  color: rgb(56, 61, 63);
+  width: 130px;
+  height: 24px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+  /* Only Fx 4 supporting transitions on psuedo elements so far... */
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  opacity: 0.75;    
+}
+.figureVideo:hover:before {
+  opacity: 0;
+}
+div.yearsThumb {
+  display:block;
+  padding:0% 0 0% 0%;
+}
+.yearsThumb .thumb {
+  width:33%;
+  float:left;
+  padding-left:1%;
+}
+.yearsThumb .thumb img {
+  width:100%;
+  height:auto;
+}
+
+/*Timeline*/
+#timeline-embed {
+  margin-top:45px !important;
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -45px; 
+}
+
+/*Music*/
+#musicWrap {
+  padding-top:5%;
+  background-color:#50575A;
+}
+#link {
+  /*padding-top:230px;*/
+}
+/*#musicWrap ul.roundabout-holder {
+  padding-top:200px !important;
+}*/
+
+.roundabout-holder {
+  list-style: none;
+  padding: 0;
+  margin-left: 80px;
+  height: 15em;
+  width: 60em;
+}
+.roundabout-moveable-item {
+  height: 1em;
+  width: 25em;
+  cursor: pointer;
+  /*background-color: #ccc;*/
+  border: 1px solid #999;
+  top:0 !important;
+}
+.roundabout-in-focus {
+  cursor: auto;
+  padding-top:20px;
+}
+#musicWrap a {
+  color:#505759;
+  font-family:maven-pro, sans-serif;
+  font-size:0.8em;
+}
+#musicWrap .button {
+  background-color:#CDCECF;
+  border-color:#ffffff;
+  font-weight:100;
+}
+#musicWrap .button:hover {
+  background-color: #76C2BB;
+  color:#383D3F;
+}
+#musicText .musicTitle {
+  font-family:maven-pro, sans-serif;
+  color:rgb(56, 61, 63);
+  padding:2% 2% 2% 2%;
+  font-size:1.1em;
+  width: 28%;
+  color:#383D3F;
+  background-color:#D0B9B9;
+}
+#musicText .musicDes {
+  padding:1% 1% 1% 0;
+  font-family:open-sans, sans-serif;
+  color: #CDCECF;
+  font-size:1em;
+  line-height:1.5em;
+}
+
+.audiojs .play-pause {
+  width: 40px;
+}
+.musicPlayer {
+  padding-top:2%;
+  padding-left:5%;
+}
+.musicPlayer span{
+  font-family:open-sans, sans-serif;
+  color: #CDCECF;
+  font-size:1em;
+}
+.roundabout-moveable-item {
+  border:0;
+}
+.audiojs {
+  margin-top:2%;
+  margin-bottom:2%;
+  background-image:none;
+  background:#CDCECF;
+}
+.audiojs .time,.audiojs .time em,.audiojs .time strong{
+  color:#383D3F;
+  text-shadow:none;
+  font-weight:bold;
+}
+.audiojs .time {
+  border-left:1px solid #383D3F;
+}
+.progress {
+  border:none;
+  padding:0;
+}
+.audiojs .scrubber {
+  background:#383D3F;
+}
+.audiojs .progress {
+  background-image:
+  -webkit-gradient(linear, left top, left bottom, color-stop(0, #666), color-stop(0.5, #666), color-stop(0.51, #666), color-stop(1, #666));
+  background-image:-moz-linear-gradient(center top, #666 0%, #666 50%, #666 51%, #666 100%)
+}
+.audiojs .loaded {
+  background:#383D3F;
+  background-image:none;
+}
+.audiojs .play-pause {
+  border-right:1px solid #383D3F;
+}
+.audiojs object, embed {
+  width:0 ;
+}
+/*perspective*/
+@media (max-width: 1320px) and (min-width: 1160px){  
+  .persCap p {
+    width:90%;
+    float:right;
+  }
+}
+@media (max-width: 1159px) and (min-width: 1025px){  
+  .persCap p {
+    width:80%;
+    float:right;
+  }
+}
+.persWrap {
+  margin-top:3%;
+}
+.persEach {
+  margin-bottom:2%;
+}
+.persWrap .title {
+  margin-left: -5px;
+  clear: both;
+  width: 25.12%;
+  color:#E7E7E7;
+}
+.persWrap .title-1 {
+  background-color: #7E7E7E;
+}
+.persTitle p {
+  padding-top:1%;
+  padding-left:2%;
+  font-family:open-sans, sans-serif;
+  color: rgb(56, 61, 63);
+  font-size:1.1em;
+}
+.persMedia {
+  width:35%;
+  float:left;
+  clear:both;
+  margin:2% 0 2% 2% ;
+}
+.persCap {
+  width:60%;
+  float:right;
+  padding:1.5% 2% 0 0;
+}
+.persCap p {
+  padding:1%;
+  font-family:open-sans, sans-serif;
+  color: rgb(56, 61, 63);
+  font-size:1em;
+  line-height:1.5em;
+}
+.persPad{
+  background-color:rgb(80, 87, 89);
+}
+.aboutText.blogInfo {
+  padding:1.5% 0% 1% 2%;
+  line-height:1.6em;
+}
+/*About*/
+div#about .videoWrap {
+  padding:0;
+}
+div#about .row {
+  min-width:100% !important;
+}
+.twoCol {
+  -moz-column-count:2; /* Firefox */
+  -webkit-column-count:2; /* Safari and Chrome */
+  column-count:2;
+  -moz-column-gap:40px; /* Firefox */
+  -webkit-column-gap:40px; /* Safari and Chrome */
+  column-gap:40px;
+}
+.aboutText {
+  background:#F0F0F0;
+  font-family:open-sans, sans-serif;
+  color: rgb(56, 61, 63);
+  font-size:1em;
+  border-bottom:1px solid #ccc;
+  padding:2% 3% 1.5% 3%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.aboutText p{
+  line-height: 1.9em;
+}
+div.aboutImgRight {
+  padding: 0.5% 0 0 3%;
+  border-left: 1px solid #6F797D;
+}
+div.aboutImgLeft {
+  padding: 0.5% 3% 0 0%;
+  border-right: 1px solid #6F797D;
+}
+div.aboutTextLeft p{
+  padding-left:3%;
+}
+/*Footer*/
+div.footer {
+  font-family:maven-pro, sans-serif;
+  background: rgb(56, 61, 63);
+  opacity:0.9;
+  color: rgb(205, 206, 207);
+  font-size:1em;
+  line-height:1.2em;
+  padding-top:1%;
+  padding-left:1.5%;
+  padding-bottom:1%;
+  text-transform: uppercase;
+}
+html, body {
+  height: 100%;
+}
+.wrap:after {
+  content: "";
+  display: block;
+}
+.footer, .wrap:after {
+  /* .push must be the same height as footer */
+  height: 45px; 
+}
+

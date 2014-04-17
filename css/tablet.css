@@ -1,0 +1,60 @@
+/*CSS For Tablet*/
+@media only screen and (max-width: 780px) {  
+    /*Nav*/
+    div.wrap {
+        margin-top:45px;
+    }
+    #nav-main {
+        display:none;
+    }
+    #nav-main ul {
+        margin-top:0;
+        padding-top:10px;
+    }
+    #nav-main li a {
+        padding:2.2% 0.5%;
+    } 
+    .symbol, a.symbol:before {
+        padding-left:0;
+        padding-right:0;
+    }
+    .social li {
+        width:30px;
+    }
+    div.social.hide-for-large-up {
+        float:right;
+        height:45px;
+    }
+    div#nav a#pull { 
+        font-family:maven-pro, sans-serif; 
+        margin-top:15px;
+        display: inline-block;        
+        position: relative;  
+        color:#CDCECF;
+    }  
+    .box-shadow-menu {
+        position: relative;
+        padding-left: 1.3em;
+    }
+    .box-shadow-menu:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.25em;
+      width: 1em;
+      height: 0.13em;
+      background: #CDCECF;
+      box-shadow: 
+        0 0.25em 0 0 #CDCECF,
+        0 0.5em 0 0 #CDCECF;
+    }
+    /*Story*/
+    .storyEach {
+        width:100%;
+    }
+    .storyWrap .title {
+        width:100%;
+        padding:0.7em 0;
+    }
+
+}  

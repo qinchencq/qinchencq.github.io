@@ -1,0 +1,92 @@
+/*CSS For Small Computer Screen*/
+@media (max-width: 1024px) {  
+    /*navigation*/
+	#nav { 
+        height:44px;
+        border-bottom:none;
+    }
+    #site-title {
+        font-size:1.8em;
+    }
+	#nav-main {
+        height:45px;
+        background: rgb(56, 61, 63);
+        border-bottom:1px solid #CDCECF;
+    }
+	#nav-main ul {
+		padding-left:2%;
+	}
+    #nav-main li a {
+        padding:12px 0.8% 15px 0.8%;
+    }
+    .social li {
+        width:34px;
+    }
+	div.social.hide-for-large-up {
+        float:right;
+        height:45px;
+    }
+    /*Home Page*/
+    div.homeText li {
+        margin-bottom:3%;
+    }
+    /*Stories*/
+    .storyEach {
+        width:50%;
+    }
+    .storyInfo{
+        padding-bottom:30px;
+    }
+    .artistInfo {
+        line-height: 1.4em;
+        padding:1% 2%;
+    }
+    /*Music*/
+    /*Perspective*/
+    .persMedia {
+        width:100%;
+        margin:2% 0 0 3%;
+    }
+    .persCap {
+      width:100%;
+      padding:1.5% 2%;
+    }
+    .aboutText.blogInfo {
+      padding:1.5% 0% 1% 3%;
+    }
+    /*about*/
+    div.aboutImgRight {
+      padding:0.5% 0 0 1.5%;
+      border-left:none;
+    }
+    div.aboutImgLeft {
+      padding:0.5% 0 1.5% 1.5%;
+      border-right:none;
+    }
+    div.aboutTextLeft p{
+      padding:0;
+    }
+} 
+@media (max-width: 1023px) { 
+    #nav {
+        height:45px;
+    }
+    #nav-main {
+            height:48px;
+            background: rgb(56, 61, 63);
+        } 
+    div.wrap {
+      margin-top:93px;
+    }
+    /*Years*/
+    #title-then {
+        border-right:none;
+    }
+    .yearsThumb .thumb:first-child,.yearsThumb .thumb:nth-child(n){
+        width:50%;
+    }
+    .yearsThumb .thumb:last-child {
+        margin-top:10px;
+        width:100%;
+    }
+}
